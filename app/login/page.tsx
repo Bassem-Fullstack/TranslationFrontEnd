@@ -53,7 +53,7 @@ export default function RegisterPage () {
 
   } 
 
-  catch (err) {
+  catch (err:any) {
   
    const errorData = err.response?.data?.message || "Something Went Wrong"
    

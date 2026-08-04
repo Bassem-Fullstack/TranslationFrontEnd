@@ -97,7 +97,7 @@ setTranslatedText(res.data.translation) // انت بتخزن نص هنا بتا�
 }
 
 
-catch(err){
+catch(err:any){
 
 console.log(err);
 
@@ -169,7 +169,7 @@ router.push("/login")
 }
 
 
-catch(err){
+catch(err:any){
 
  console.log(err)
 
