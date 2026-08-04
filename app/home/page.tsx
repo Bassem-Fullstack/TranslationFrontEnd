@@ -114,7 +114,10 @@ finally {
 
 
 const handleVoiceInput = () => {
-  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+const win = window as any;
+
+const SpeechRecognition = win.SpeechRecognition || win.webkitSpeechRecognition;
 
   if (!SpeechRecognition) {
 
