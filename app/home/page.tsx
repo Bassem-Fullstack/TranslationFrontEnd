@@ -264,12 +264,14 @@ return (
 
  <div className="flex flex-col md:flex-row justify-between gap-2 mb-4">
 
-  <input value={sourceLanguage} className="border focus:outline-gray-400 p-2 rounded-md w-full" list="languages" onChange={(e) => setSourceLanguage(e.target.value)} />
+  <input placeholder="Source language" value={sourceLanguage} className="border focus:outline-gray-400 p-2 rounded-md w-full" list="languages" onChange={(e) => setSourceLanguage(e.target.value)} />
 
 
 
  <input
     list="languages"
+
+  placeholder="Target language"
 
     value={targetLanguage}
 
