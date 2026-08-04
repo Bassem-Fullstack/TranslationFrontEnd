@@ -29,7 +29,7 @@ export default function RegisterPage () {
 
  const router = useRouter()
 
- const handleSubmit = async (e) => {
+ const handleSubmit = async (e:React.FormEvent) => {
     
    e.preventDefault()
 
