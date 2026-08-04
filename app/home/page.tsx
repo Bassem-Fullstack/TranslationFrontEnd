@@ -46,6 +46,65 @@ const LANGUAGES  = [
 
 
 
+const LANGUAGE_TO_LOCALE: Record<string, string> = {
+  Arabic: "ar-EG",
+  English: "en-US",
+  French: "fr-FR",
+  German: "de-DE",
+  Spanish: "es-ES",
+  Italian: "it-IT",
+  Turkish: "tr-TR",
+  Portuguese: "pt-PT",
+  Russian: "ru-RU",
+  Chinese: "zh-CN",
+  Japanese: "ja-JP",
+  Korean: "ko-KR",
+  Dutch: "nl-NL",
+  Hindi: "hi-IN",
+  Swedish: "sv-SE",
+  Polish: "pl-PL",
+  Greek: "el-GR",
+  Hebrew: "he-IL",
+  Thai: "th-TH",
+  Vietnamese: "vi-VN",
+  Indonesian: "id-ID",
+  Malay: "ms-MY",
+  Ukrainian: "uk-UA",
+  Czech: "cs-CZ",
+  Romanian: "ro-RO",
+  Hungarian: "hu-HU",
+  Finnish: "fi-FI",
+  Danish: "da-DK",
+  Norwegian: "nb-NO",
+  Filipino: "fil-PH",
+  Bengali: "bn-BD",
+  Urdu: "ur-PK",
+  Persian: "fa-IR",
+  Swahili: "sw-KE",
+  Tamil: "ta-IN",
+  Telugu: "te-IN",
+  Marathi: "mr-IN",
+  Gujarati: "gu-IN",
+  Punjabi: "pa-IN",
+  Kannada: "kn-IN",
+  Malayalam: "ml-IN",
+  Slovak: "sk-SK",
+  Bulgarian: "bg-BG",
+  Croatian: "hr-HR",
+  Serbian: "sr-RS",
+  Lithuanian: "lt-LT",
+  Latvian: "lv-LV",
+  Estonian: "et-EE",
+  Slovenian: "sl-SI",
+  Icelandic: "is-IS",
+  Amharic: "am-ET",
+  Zulu: "zu-ZA",
+  Afrikaans: "af-ZA",
+};
+
+
+
+
 export default function Translation () {
 
 
@@ -130,7 +189,7 @@ const SpeechRecognition = win.SpeechRecognition || win.webkitSpeechRecognition;
 
   const recognition = new SpeechRecognition();
 
-  recognition.lang =  sourceLanguage || "ar-EG";
+  recognition.lang =  LANGUAGE_TO_LOCALE[sourceLanguage] || "ar-EG";
 
   recognition.interimResults = false;
 
